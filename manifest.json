@@ -19,7 +19,7 @@
     }
   ],
   "share_target": {
-    "action": "/index.html", // Or simply "." if index.html is the start_url
+    "action": ".",
     "method": "GET",       // Use GET to receive data in URL query parameters
     "enctype": "application/x-www-form-urlencoded",
     "params": {
