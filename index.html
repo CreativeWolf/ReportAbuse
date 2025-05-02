@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweet Link Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#317EFB"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <h1>Tweet Link Analyzer</h1>
+
+    <div id="shared-content">
+        <h2>Shared Data:</h2>
+        <pre id="data-display">Nothing shared yet.</pre>
+    </div>
+
+    <div id="analysis">
+        <h2>Analysis:</h2>
+        <p id="status">Waiting for shared link...</p>
+        <p><strong>Extracted URL:</strong> <span id="extracted-url">N/A</span></p>
+        <p><strong>Is Bit.ly:</strong> <span id="is-bitly">N/A</span></p>
+        <p><strong>Final URL (Manual Check Needed):</strong> <span id="final-url-info">Visit the extracted URL manually to find the final destination.</span></p>
+        <p><strong>Domain (from Final URL):</strong> <span id="domain-info">Extract manually after finding the final URL.</span></p>
+        <hr>
+        <h3>Manual Checks Required:</h3>
+        <ol>
+            <li>Open the "Extracted URL" above in your browser. Note the final URL it redirects to.</li>
+            <li>Extract the domain name (e.g., `example.com`) from the final URL.</li>
+            <li>Use an online tool to perform NSLookup on the domain (e.g., search "online nslookup tool"). Note the IP addresses.</li>
+            <li>Use an online tool to perform WHOIS on the IP addresses (e.g., search "online whois lookup").</li>
+            <li>Check the WHOIS results (look for Organization or NetName) to see if they mention "Cloudflare".</li>
+        </ol>
+        <div id="report-section" style="display: none;">
+             <h3>Report to Cloudflare (If Applicable):</h3>
+             <p>If the WHOIS lookup indicates the IPs belong to Cloudflare, you can report the abuse:</p>
+             <p><strong>Domain to Report:</strong> <span id="report-domain"></span></p>
+             <p><strong>Original Tweet URL:</strong> <span id="report-tweet-url"></span></p>
+             <p><strong>Bit.ly URL:</strong> <span id="report-bitly-url"></span></p>
+             <p><strong>Final URL:</strong> <span id="report-final-url"></span> (You need to provide this)</p>
+             <p>Take screenshots of the tweet and the final destination page.</p>
+             <a href="https://www.cloudflare.com/abuse/form" target="_blank" rel="noopener noreferrer">
+                 Go to Cloudflare Abuse Form
+             </a>
+             <p>You will need to manually fill in the form with the domain, URLs, and your screenshots.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
