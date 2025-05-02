@@ -1,0 +1,60 @@
+body {
+    font-family: sans-serif;
+    padding: 1em;
+    line-height: 1.6;
+}
+
+#shared-content, #analysis {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+pre {
+    white-space: pre-wrap; /* Handle long URLs */
+    word-wrap: break-word;
+    background-color: #eee;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+
+span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 1.5em 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+#report-section {
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px dashed red;
+    background-color: #ffebeb;
+}
